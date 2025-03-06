@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut, SignInButton, UserButton, SignOutButton } from "@clerk/nextjs";
+import { Import, Loader } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Header = () => {
     return (
@@ -11,6 +14,20 @@ export const Header = () => {
                     </h1>
 
                 </div>
+                <ClerkLoading>
+                    <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+                </ClerkLoading>
+                <ClerkLoaded>
+                    <SignedIn>
+                        <UserButton afterSignOutUrl="/" />
+                    </SignedIn>
+                    <SignedOut>
+                        <SignInButton mode="modal" afterSignInUrl="/learn"
+                            afterSignUpUrl="/learn">
+                            <Button size="lg" variant="ghost">Login</Button>
+                        </SignInButton>
+                    </SignedOut>
+                </ClerkLoaded>
             </div>
         </header>
     );
