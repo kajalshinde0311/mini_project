@@ -7,11 +7,11 @@ export const Footer = () => {
             <div className="max-w-screen-lg mx-auto flex items-center justify-center h-full gap-6">
                 <Button size="lg" variant="ghost" className="border-2 border-white text-black flex items-center px-4">
                     <Image
-                        src="/crotia.png" alt="Croatian"
-                        height={32} width={40}
+                        src="/japan.png" alt="Croatian"
+                        height={34} width={40}
                         className="mr-2 rounded-md"
                     />
-                    Croatian
+                    Japan
                 </Button>
                 <Button size="lg" variant="ghost" className="border-2 border-white text-black  flex items-center px-4">
                     <Image
