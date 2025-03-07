@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className="text-xl lg:text-3xl font-bold text-neutral-600 max-w-[480px] text-center">
           Learn, Practice, and Master new languages with Infinite Era.
         </h1>
-        <div>
+        <div className="flex flex-col items-center gap-y-3 max-w-[330px] w-full">
           <ClerkLoading>
             <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
           </ClerkLoading>
@@ -29,7 +29,8 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="ghost"
-                  className="w-full text-blue-500  p-0 outline-none ring-0 focus:ring-0">
+                  className="w-full text-blue-500  p-0 outline-none ring-0 focus:ring-0 
+                  ">
                   I already have an account
                 </Button>
               </SignInButton>
