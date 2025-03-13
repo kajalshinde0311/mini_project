@@ -11,7 +11,7 @@ export const Footer = () => {
                         height={34} width={40}
                         className="mr-2 rounded-md"
                     />
-                    Japan
+                    Japanese
                 </Button>
                 <Button size="lg" variant="ghost" className="border-2 border-white text-black  flex items-center px-4">
                     <Image
@@ -19,7 +19,7 @@ export const Footer = () => {
                         height={32} width={40}
                         className="mr-2 rounded-md"
                     />
-                    India
+                    Hindi
                 </Button>
                 <Button size="lg" variant="ghost" className="border-2 border-white text-black   flex items-center px-4">
                     <Image

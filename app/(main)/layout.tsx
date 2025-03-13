@@ -1,5 +1,5 @@
 import exp from "constants";
-import { ScanFace, StepForward } from "lucide-react";
+import { ScanFace, Sidebar, StepForward } from "lucide-react";
 
 type props = {
     children: React.ReactNode;
@@ -7,9 +7,15 @@ type props = {
 
 const MainLayout = ({ children, }: Props) => {
     return (
-        <div>
-            {children}
-        </div>
+        <>
+            <MobileHeader />
+            <Sidebar className="hidden lg:flex" />
+            <main className="lg:pl-[256px] h-full pt-[50px]  lg:pt-0">
+                <div className="bg-red-500 h-full">
+                    {children}
+                </div>
+            </main>
+        </>
     );
 };
 
