@@ -1,11 +1,12 @@
-import exp from "constants";
-import { ScanFace, Sidebar, StepForward } from "lucide-react";
+import { Sidebar } from "@/components/sidebar";
+import { MobileHeader } from "@/components/Mobile-header";
+import { ScanFace, StepForward } from "lucide-react";
 
 type props = {
     children: React.ReactNode;
 };
 
-const MainLayout = ({ children, }: Props) => {
+const MainLayout = ({ children, }: props) => {
     return (
         <>
             <MobileHeader />
