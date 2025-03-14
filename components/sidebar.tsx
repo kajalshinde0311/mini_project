@@ -1,4 +1,8 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { SidebarItem } from "@/components/sidebar-item";
+
 type Props = {
     className?: string;
 };
@@ -7,8 +11,22 @@ type Props = {
 export const Sidebar = ({ className }: Props) => {
     return (
         <div className={cn(
-            "flex bg-blue-500 h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col", className,)}>
-            Sidebar
+            "flex  h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col", className)}>
+            <Link href="/learn">
+                <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3 ">
+                    <Image src="/logo1.png" height={40} width={40} alt="logo" priority unoptimized />
+                    <h1 className="text-2xl font-extrabold text-pink-500 tracking-wide uppercase">
+                        Era
+                    </h1>
+
+                </div>
+            </Link>
+            <div className="flex flex-col gap-y-2 flex-1">
+                <SidebarItem label="Learn" href="/learn" iconSrc="/learn.jpg" isActive={true} />
+                <SidebarItem label="Leaderboard" href="/leaderboard" iconSrc="/leaderboard.jpg" />
+                <SidebarItem label="quests" href="/quests" iconSrc="/quests.jpg" />
+                <SidebarItem label="shop" href="/shop" iconSrc="/cart.jpg" />
+            </div>
         </div >
     );
 };
