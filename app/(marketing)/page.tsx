@@ -20,7 +20,7 @@ export default function Home() {
           </ClerkLoading>
           <ClerkLoaded>
             <SignedOut>
-              <SignUpButton mode="modal" afterSignInUrl="/learn" afterSignUpUrl="/learn">
+              <SignUpButton mode="modal" afterSignInUrl="learn" afterSignUpUrl="/learn">
                 <Button size="lg" className="w-full bg-pink-500 text-white hover:bg-pink-600">
                   Get Started
                 </Button>
